@@ -1,0 +1,3 @@
+[console_scripts]
+color_detector = color_tracker.color_detector:main
+navigator = color_tracker.navigator:main

@@ -1,0 +1,24 @@
+[0.717s] Invoking command in '/home/harshpc/ros2_ws/src/color_tracker': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/harshpc/ros2_ws/build/color_tracker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/harshpc/ros2_ws/install/color_tracker/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/color_tracker build --build-base /home/harshpc/ros2_ws/build/color_tracker/build install --record /home/harshpc/ros2_ws/build/color_tracker/install.log --single-version-externally-managed install_data
+[0.933s] running egg_info
+[0.948s] writing ../../build/color_tracker/color_tracker.egg-info/PKG-INFO
+[0.948s] writing dependency_links to ../../build/color_tracker/color_tracker.egg-info/dependency_links.txt
+[0.948s] writing entry points to ../../build/color_tracker/color_tracker.egg-info/entry_points.txt
+[0.948s] writing requirements to ../../build/color_tracker/color_tracker.egg-info/requires.txt
+[0.948s] writing top-level names to ../../build/color_tracker/color_tracker.egg-info/top_level.txt
+[0.980s] reading manifest file '../../build/color_tracker/color_tracker.egg-info/SOURCES.txt'
+[0.980s] writing manifest file '../../build/color_tracker/color_tracker.egg-info/SOURCES.txt'
+[0.980s] running build
+[0.980s] running build_py
+[0.981s] copying color_tracker/color_tracker.py -> /home/harshpc/ros2_ws/build/color_tracker/build/lib/color_tracker
+[0.981s] running install
+[0.986s] running install_lib
+[1.003s] copying /home/harshpc/ros2_ws/build/color_tracker/build/lib/color_tracker/color_tracker.py -> /home/harshpc/ros2_ws/install/color_tracker/lib/python3.12/site-packages/color_tracker
+[1.003s] byte-compiling /home/harshpc/ros2_ws/install/color_tracker/lib/python3.12/site-packages/color_tracker/color_tracker.py to color_tracker.cpython-312.pyc
+[1.004s] running install_data
+[1.005s] running install_egg_info
+[1.020s] removing '/home/harshpc/ros2_ws/install/color_tracker/lib/python3.12/site-packages/color_tracker-0.0.0-py3.12.egg-info' (and everything under it)
+[1.020s] Copying ../../build/color_tracker/color_tracker.egg-info to /home/harshpc/ros2_ws/install/color_tracker/lib/python3.12/site-packages/color_tracker-0.0.0-py3.12.egg-info
+[1.020s] running install_scripts
+[1.125s] Installing color_tracker script to /home/harshpc/ros2_ws/install/color_tracker/lib/color_tracker
+[1.126s] writing list of installed files to '/home/harshpc/ros2_ws/build/color_tracker/install.log'
+[1.153s] Invoked command in '/home/harshpc/ros2_ws/src/color_tracker' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/harshpc/ros2_ws/build/color_tracker/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/harshpc/ros2_ws/install/color_tracker/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/color_tracker build --build-base /home/harshpc/ros2_ws/build/color_tracker/build install --record /home/harshpc/ros2_ws/build/color_tracker/install.log --single-version-externally-managed install_data

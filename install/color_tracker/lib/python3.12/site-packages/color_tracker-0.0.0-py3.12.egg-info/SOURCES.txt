@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../../build/color_tracker/color_tracker.egg-info/PKG-INFO
+../../build/color_tracker/color_tracker.egg-info/SOURCES.txt
+../../build/color_tracker/color_tracker.egg-info/dependency_links.txt
+../../build/color_tracker/color_tracker.egg-info/entry_points.txt
+../../build/color_tracker/color_tracker.egg-info/requires.txt
+../../build/color_tracker/color_tracker.egg-info/top_level.txt
+../../build/color_tracker/color_tracker.egg-info/zip-safe
+color_tracker/__init__.py
+color_tracker/color_detector.py
+color_tracker/navigator.py
+resource/color_tracker
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
