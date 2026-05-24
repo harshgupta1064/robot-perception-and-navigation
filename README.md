@@ -9,22 +9,7 @@
 
 ## Demo
 
-<p align="center">
-  <video
-    src="https://raw.githubusercontent.com/harshgupta1064/robot-perception-and-navigation/main/RobotObjectDetectionAndNavigation.mp4"
-    width="640"
-    autoplay
-    muted
-    loop
-    playsinline
-  >
-    <source
-      src="https://raw.githubusercontent.com/harshgupta1064/robot-perception-and-navigation/main/RobotObjectDetectionAndNavigation.mp4"
-      type="video/mp4"
-    />
-    <source src="./RobotObjectDetectionAndNavigation.mp4" type="video/mp4" />
-  </video>
-</p>
+https://github.com/user-attachments/assets/7b6597dd-8920-457d-b2ef-ee7280e55350
 
 ---
 
