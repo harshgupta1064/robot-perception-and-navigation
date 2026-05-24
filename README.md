@@ -1,5 +1,3 @@
-
-
 # Visual Servoing for Mobile Robot Goal Seeking
 
 > ROS 2 perception and navigation for a simulated TurtleBot3: detect a green target in the camera feed, steer with proportional control, and approach when aligned.
@@ -11,30 +9,7 @@
 
 ## Demo
 
-<<<<<<< HEAD
 https://github.com/user-attachments/assets/7b6597dd-8920-457d-b2ef-ee7280e55350
-=======
-<!-- <p align="center">
-  <video
-    src="https://raw.githubusercontent.com/harshgupta1064/robot-perception-and-navigation/main/RobotObjectDetectionAndNavigation.mp4"
-    width="640"
-    autoplay
-    muted
-    loop
-    playsinline
-  >
-    <source
-      src="https://raw.githubusercontent.com/harshgupta1064/robot-perception-and-navigation/main/RobotObjectDetectionAndNavigation.mp4"
-      type="video/mp4"
-    />
-    <source src="./RobotObjectDetectionAndNavigation.mp4" type="video/mp4" />
-  </video>
-
-https://github.com/user-attachments/assets/7b6597dd-8920-457d-b2ef-ee7280e55350
-
-
-</p> -->
->>>>>>> 9edad038da78a9030173591465798d24c215bffa
 
 ---
 
