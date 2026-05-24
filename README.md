@@ -9,7 +9,22 @@
 
 ## Demo
 
-<video src="RobotObjectDetectionAndNavigation.mp4" width="100%" autoplay muted loop playsinline></video>
+<p align="center">
+  <video
+    src="https://raw.githubusercontent.com/harshgupta1064/robot-perception-and-navigation/main/RobotObjectDetectionAndNavigation.mp4"
+    width="640"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    <source
+      src="https://raw.githubusercontent.com/harshgupta1064/robot-perception-and-navigation/main/RobotObjectDetectionAndNavigation.mp4"
+      type="video/mp4"
+    />
+    <source src="./RobotObjectDetectionAndNavigation.mp4" type="video/mp4" />
+  </video>
+</p>
 
 ---
 
@@ -42,15 +57,9 @@
 ## How it works
 
 ```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 12, 'rankSpacing': 20, 'padding': 4}, 'themeVariables': {'fontSize': '11px'}}}%%
 flowchart LR
-  CAM["/camera/image_raw"]
-  DET["color_detector"]
-  NAV["navigator"]
-  CMD["/cmd_vel"]
-
-  CAM --> DET
-  DET -->|"/detection"| NAV
-  NAV --> CMD
+  A["/camera"] --> B["detector"] -->|"/detection"| C["navigator"] --> D["/cmd_vel"]
 ```
 
 1. **Detect** — HSV green threshold → morphology → contours → pick most circular blob → centroid & horizontal error vs image center.
@@ -213,63 +222,7 @@ HSV bounds and circularity filter: [`color_detector.py`](src/color_tracker/color
 
 ---
 
-## Assignment Q1 (a–i)
 
-Peppermint Assignment — **Color-based navigation with ROS 2 and OpenCV**.
-
-<details>
-<summary><b>(a)–(e) Implementation checklist</b></summary>
-
-| Task | Implementation |
-|------|----------------|
-| **(a)** TurtleBot3 Gazebo + green sphere | `turtlebot3_gazebo` + green sphere SDF in world |
-| **(b)** Subscribe to camera | `/camera/image_raw` in `color_detector.py` |
-| **(c)** OpenCV threshold, contour, error | HSV, morphology, circularity, centroid error |
-| **(d)** P-controller rotation | `angular.z = Kp * error` in `navigator.py` |
-| **(e)** Move when aligned | Forward when `\|error\| < error_threshold` |
-
-</details>
-
-<details>
-<summary><b>(f) Object out of frame — recovery</b></summary>
-
-When the sphere leaves the frame, `detected` becomes `0.0`:
-
-1. **Directional search** — rotate toward the side where the target was last seen (`last_dir`), instead of a blind 360° spin.
-2. **Timeout** — if nothing is detected for **1.5 s**, perform a slow full search spin.
-
-</details>
-
-<details>
-<summary><b>(g) Proximity and stop</b></summary>
-
-**Implemented:** contour **area** as a distance proxy (closer → larger blob). Stop when `area ≥ stop_area` and the target is centered; **latch** prevents creep from noise.
-
-**Alternative:** use TurtleBot3 **LiDAR** (`/scan`) — stop when forward range &lt; ~0.3 m for lighting-independent, metric stopping.
-
-</details>
-
-<details>
-<summary><b>(h) Lidar-only navigation</b></summary>
-
-Without color:
-
-1. **Cluster** scan/point-cloud hits into objects.
-2. **RANSAC sphere fit** — LiDAR only sees the front surface (partial spherical cap). Sample 3 points → hypothesize sphere → count inliers; repeat ~100–200×. Spheres score high; pillars/cylinders score low.
-3. **Steer** — bearing to cluster center = angular error → P-control.
-4. **Range** — direct from LiDAR (no area proxy).
-5. **Recovery** — 360° FOV; target rarely “out of frame” unless behind a wall.
-
-</details>
-
-<details>
-<summary><b>(i) Follow only the sphere among other shapes</b></summary>
-
-Run RANSAC sphere fitting **per cluster**; pick the cluster with the highest inlier ratio, then steer and approach using its bearing and range (same as (h)).
-
-</details>
-
----
 
 ## References
 
